@@ -806,9 +806,16 @@ var DragManager = new function() {
   	    }
   	    else {
   	    	//dragObject.elem.whichContainerHaveThisCard = temp;
-  	    	deleteFromOldContainer(dragObject.elem);
+  	    	deleteFromOldContainer(dragObject.elem, arrAdditionalElem);
   	    	elem.add(dragObject.elem);
   	    	//dragObject.elem.whichContainerHaveThisCard = temp2;
+
+  	    	
+	  		for(var i = 0; i < arrAdditionalElem.length; i++){
+	    	  container.add(arrAdditionalElem[i]);
+	  		}
+	  		triggerOfMultyCardsProcessing = false;
+	  		arrAdditionalElem = undefined;
   	    }
   	  } else {
   	    self.onDragCancel(dragObject, arrAdditionalElem);
