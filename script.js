@@ -812,7 +812,7 @@ var DragManager = new function() {
 
   	    	if(arrAdditionalElem){
 	  		for(var i = 0; i < arrAdditionalElem.length; i++){
-	    	  container.add(arrAdditionalElem[i]);
+	    	  elem.add(arrAdditionalElem[i]);
 	  		}
 	  		triggerOfMultyCardsProcessing = false;
 	  		arrAdditionalElem = undefined;
