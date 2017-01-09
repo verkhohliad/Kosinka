@@ -810,12 +810,13 @@ var DragManager = new function() {
   	    	elem.add(dragObject.elem);
   	    	//dragObject.elem.whichContainerHaveThisCard = temp2;
 
-  	    	
+  	    	if(triggerOfMultyCardsProcessing == true && arrAdditionalElem !== undefined){
 	  		for(var i = 0; i < arrAdditionalElem.length; i++){
 	    	  container.add(arrAdditionalElem[i]);
 	  		}
 	  		triggerOfMultyCardsProcessing = false;
 	  		arrAdditionalElem = undefined;
+	  	    }
   	    }
   	  } else {
   	    self.onDragCancel(dragObject, arrAdditionalElem);
